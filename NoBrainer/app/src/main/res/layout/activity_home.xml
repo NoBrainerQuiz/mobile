@@ -1,9 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.up804392.nobrainer.HomeActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/Home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#24A6F8"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#ffffff"
+            android:ems="10"
+            android:hint="QUIZ PIN"
+            android:inputType="textPersonName|number"
+            android:maxLength="10"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:text="Please enter Quiz \n PIN below"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:width="200dp"
+            android:text="START QUIZ"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button3"
+            android:layout_alignStart="@+id/button3"
+            android:layout_below="@+id/button3"
+            android:width="200dp"
+            android:text="START LAST QUIZ"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <ListView
+    android:id="@+id/navList"
+    android:layout_width="200dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="left|start"
+    android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>
