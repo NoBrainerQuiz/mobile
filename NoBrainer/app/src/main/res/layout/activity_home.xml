@@ -65,11 +65,16 @@
 
     </RelativeLayout>
 
-    <ListView
-    android:id="@+id/navList"
-    android:layout_width="200dp"
-    android:layout_height="match_parent"
-    android:layout_gravity="left|start"
-    android:background="#ffeeeeee"/>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navBar"
+        android:theme="@style/AppTheme1"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+    />
+
+
+
 
 </android.support.v4.widget.DrawerLayout>
