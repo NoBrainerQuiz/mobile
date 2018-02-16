@@ -3,6 +3,15 @@
     <string name="quiz_pin">QUIZ PIN</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="about">About</string>
-    <string name="home">Home</string>
+    <string name="about">ABOUT</string>
+    <string name="home">HOME</string>
+    <string name="description">NoBrainer began as the brainchild of 5 \n
+    computer scientists studying at the \n
+        University of Portsmouth. \n
+        It was designed as an alternative \n
+        to other quiz apps out there that \n
+        were too slow to load and felt clunky. \n
+        The app continues today to \n
+        allow people to quiz others and enhance \n
+        people's learning experience.</string>
 </resources>
