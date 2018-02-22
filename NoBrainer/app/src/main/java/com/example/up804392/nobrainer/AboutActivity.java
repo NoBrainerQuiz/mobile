@@ -33,10 +33,6 @@ public class AboutActivity extends AppCompatActivity implements NavigationView.O
 
     }
 
-    @Override
-    public void onBackPressed() {
-
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
