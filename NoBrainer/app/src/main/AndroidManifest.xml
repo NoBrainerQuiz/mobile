@@ -20,10 +20,14 @@
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:screenOrientation="portrait"></activity>
-
-        <activity android:name=".QuizActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuizActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FinishActivity"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

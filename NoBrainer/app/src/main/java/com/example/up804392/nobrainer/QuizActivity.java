@@ -124,7 +124,10 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
 
         finish.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                Intent i = new Intent(QuizActivity.this, FinishActivity.class);
+                i.putExtra("1", score);
+                i.putExtra("2", questions.size());
+                startActivity(i);
             }
         });
     }
