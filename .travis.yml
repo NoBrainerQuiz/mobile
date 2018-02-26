@@ -8,4 +8,4 @@ android:
     - android-26
 
 script:
-   - /NoBrainer/gradlew build connectedCheck
+   - /NoBrainer/gradlew build --no-daemon connectedCheck
