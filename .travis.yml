@@ -1,5 +1,3 @@
-# Tutorial here: https://medium.com/@harmittaa/travis-ci-android-example-357f6e632fc4
-
 language: android
 sudo: required
 jdk: oraclejdk8
