@@ -1,0 +1,8 @@
+language: java
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+
+before_script:
+  - mysql -e 'CREATE DATABASE nobrainer;'
