@@ -12,4 +12,4 @@ android:
     - extra-android-m2repository
 
 script:
-- chmod +x ./gradlew
+- chmod +x /NoBrainer/gradlew
