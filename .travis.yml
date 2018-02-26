@@ -1,4 +1,5 @@
 language: android
+jdk: oraclejdk8
 android:
   components:
     # Update Android SDK Tools
@@ -12,4 +13,4 @@ android:
     - extra-android-m2repository
 
 script:
-- chmod +x /NoBrainer/gradlew
+- chmod +x NoBrainer/gradlew
