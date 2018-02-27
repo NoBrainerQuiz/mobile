@@ -21,7 +21,6 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
-
     private DatabaseAccess databaseAccess;
     private SQLiteDatabase db;
     private ArrayList<Integer> questions;
@@ -34,6 +33,16 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
     private Cursor cursor;
     private int currentQuest;
 
+    /**
+     *
+     * Constructor to set layout and initialized all buttons.
+     * Buttons on click listens created and methods implemented.
+     * sets up database connection.
+     * sets the text for the buttons and text view to match the first question.
+     *
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -141,6 +150,12 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Controls what actions are taken when items are selected from the app drawer.
+     *
+     * @param item the item select in the app drawer.
+     * @return false as the action is controlled inside the method.
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
@@ -152,6 +167,12 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
         return false;
     }
 
+    /**
+     *
+     * method to set text on answer buttons.
+     *
+     * @param id the id of the current question.
+     */
     public void setAnswers(int id){
         Cursor c = databaseAccess.getAnswers(questions.get(id));
         for(int x = 0; x<4; x++){
@@ -160,6 +181,14 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    /**
+     *
+     * call methods to set textviews and buttons with the text of the next question.
+     * if final question will make next question button invisible and make finish button viable.
+     *
+     * @param quest the textView for the question text.
+     * @param next the next question button.
+     */
     public void nextQuestion(TextView quest, Button next){
         currentQuest++;
         databaseAccess.open();
@@ -180,6 +209,12 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    /**
+     *
+     * checks if answer selected is correct and displays the outcome.
+     *
+     * @param button the button of the selected button.
+     */
     public void checkAnswer(Button button){
         databaseAccess.open();
         Cursor c = databaseAccess.checkAnswer(questions.get(currentQuest), button.getText().toString());

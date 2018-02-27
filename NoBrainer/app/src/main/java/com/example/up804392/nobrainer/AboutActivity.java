@@ -11,11 +11,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-
+/**
+ * public constructor to create About activity.
+ */
 public class AboutActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
 
+    /**
+     * Creates and sets the layout
+     * activates app draw and initializes toggle.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +48,12 @@ public class AboutActivity extends AppCompatActivity implements NavigationView.O
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Controls what actions are taken when items are selected from the app drawer.
+     *
+     * @param item the item select in the app drawer.
+     * @return false as the action is controlled inside the method.
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();

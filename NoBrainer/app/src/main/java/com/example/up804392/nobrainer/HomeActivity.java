@@ -30,6 +30,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private SharedPreferences pin;
     public static final String prefName = "lastPinUsed";
 
+    /**
+     *
+     * Constructor to set layout and initialized all buttons.
+     * Buttons on click listens created and methods implemented.
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,6 +113,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Controls what actions are taken when items are selected from the app drawer.
+     *
+     * @param item the item select in the app drawer.
+     * @return false as the action is controlled inside the method.
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();

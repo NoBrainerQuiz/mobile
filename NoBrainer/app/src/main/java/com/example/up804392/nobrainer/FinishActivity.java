@@ -16,6 +16,13 @@ public class FinishActivity extends AppCompatActivity implements NavigationView.
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
 
+    /**
+     * Creates and sets the layout.
+     * activates app draw and initializes toggle.
+     * finds the TextView.
+     * sets text of current TextView.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +50,12 @@ public class FinishActivity extends AppCompatActivity implements NavigationView.
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Controls what actions are taken when items are selected from the app drawer.
+     *
+     * @param item the item select in the app drawer.
+     * @return false as the action is controlled inside the method.
+     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
